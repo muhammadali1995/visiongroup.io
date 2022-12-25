@@ -13,12 +13,12 @@ module.exports = {
         green: {
           450: "#00cc83"
         },
+        blue: {
+          450: "#204ECF"
+        }
       },
       fontSize: {
         18: "18px"
-      },
-      outline: {
-        card: "1px solid rgba(0,0,0,.15)",
       },
       boxShadow: {
         nav: '0 3px 5px rgb(0 0 0 / 4%)'

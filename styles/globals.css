@@ -7,3 +7,7 @@
         @apply leading-[55px] font-normal text-[45px] text-center
     }
 }
+
+.card:hover .cardImage {
+    color: white !important;
+}

@@ -3,7 +3,9 @@ import styles from '../styles/Home.module.css'
 import Navbar from './navbar'
 import Header from './header'
 import Services from './services'
-import { Router } from 'next/router'
+import Project from './project'
+import Contact from './contact'
+import Footer from './footer'
 
 export default function Home() {
   return (
@@ -18,6 +20,9 @@ export default function Home() {
         <Navbar />
         <Header />
         <Services />
+        <Project />
+        <Contact />
+        <Footer />
       </main>
     </>
   )
