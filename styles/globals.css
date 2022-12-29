@@ -11,3 +11,11 @@
 .card:hover .cardImage {
     color: white !important;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+#contact {
+    scroll-behavior: smooth;
+}

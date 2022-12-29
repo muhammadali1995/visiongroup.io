@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import { useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { useContext } from 'react'
@@ -17,32 +15,26 @@ export default function Navbar() {
     const [isMenuBtnClicked, setIsMenuBtnClicked] = useState(false)
     const { isDarkMode }: any = useContext(Context)
     const CreateLink = ({ href, linkName }: any) => {
-        return <Link
+        return <a
             href={href}
             className={'p-4 cursor-pointer border-b-2 -mb-1 hover:border-b-2 ' + (isDarkMode ? 'hover:border-white border-b-gray-450' : 'border-white hover:border-b-gray-450')}>
             {linkName}
-        </Link>
+        </a>
     }
 
     const CreateMobileLink = ({ href, linkName }: any) => {
-        return <Link
+        return <a
             href={href}
             className='py-4 cursor-pointer border-b border-gray-300 w-full -mb-1'>
             {linkName}
-        </Link>
+        </a>
     }
 
     return (
         <>
             <div className={'flex items-center justify-between z-50 sm:px-16 px-2 shadow-nav top-0 w-full lg:pb-1 ' + (isDarkMode ? 'bg-gray-450 text-white' : 'bg-white text-gray-450')}>
                 <div className="flex items-center">
-                    <Image
-                        src='https://uniquegroup.sg/logo.png'
-                        alt="logo"
-                        width={55}
-                        height={55}
-                        className='p-1'
-                    />
+                    <img src="https://uniquegroup.sg/logo.png" alt='logo' className='p-1 h-14 w-14' />
                     <h3 className='sm:text-4xl text-xl font-bold'>Unique Group</h3>
                 </div>
                 <div className="items-center gap-4 font-normal text-18 hidden lg:flex">

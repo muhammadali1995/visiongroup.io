@@ -20,13 +20,7 @@ export default function Header() {
                 </button>
             </div>
             <div>
-                <Image
-                    src='https://uniquegroup.sg/heroImage.png'
-                    alt="header"
-                    width={808}
-                    height={490}
-                    className="lg:-mt-14"
-                />
+                <img src="https://uniquegroup.sg/heroImage.png" className="lg:-mt-14 w-[808px] h-[490px]" alt="header" />
             </div>
         </div>
     )

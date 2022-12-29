@@ -19,13 +19,7 @@ function ProjectCard({ cardImage, cardTitle, cardSubtitle }: any) {
     return (
         <div className={'w-full cursor-pointer mx-auto max-w-[405px] ' + (isDarkMode ? 'bg-gray-450 text-white' : 'bg-white text-gray-450')} style={{ 'filter': 'drop-shadow(4px 8px 8px rgba(0,0,0,.08))' }}>
             <div className="text-blue-450 cardImage">
-                <Image
-                    src={cardImage}
-                    alt="project"
-                    width={405}
-                    height={55}
-                    className='p-1'
-                />
+                <img src={cardImage} alt="project" className='w-[405px] p-1' />
             </div>
             <div className='py-2 px-4'>
                 <h3 className="mt-6 font-normal text-xl text-blue-450">{cardTitle}</h3>
