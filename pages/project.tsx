@@ -3,15 +3,15 @@ import { useContext } from 'react'
 import { Context } from './index'
 
 const projects: any = [
-    { img: '/../public/assets/project1.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
-    { img: '/../public/assets/project1.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
-    { img: '/../public/assets/project1.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
-    { img: '/../public/assets/project1.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
-    { img: '/../public/assets/project1.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
-    { img: '/../public/assets/project1.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
-    { img: '/../public/assets/project1.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
-    { img: '/../public/assets/project1.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
-    { img: '/../public/assets/project1.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' }
+    { img: 'https://uniquegroup.sg/kimHockImage.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
+    { img: 'https://uniquegroup.sg/kimHockImage.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
+    { img: 'https://uniquegroup.sg/kimHockImage.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
+    { img: 'https://uniquegroup.sg/kimHockImage.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
+    { img: 'https://uniquegroup.sg/kimHockImage.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
+    { img: 'https://uniquegroup.sg/kimHockImage.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
+    { img: 'https://uniquegroup.sg/kimHockImage.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
+    { img: 'https://uniquegroup.sg/kimHockImage.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' },
+    { img: 'https://uniquegroup.sg/kimHockImage.png', title: 'Kim Hock', subtitle: 'Cable laying of 630sqmm & 300 sqmm. 22kV High Voltage Termination, Hipot Test.' }
 ]
 
 function ProjectCard({ cardImage, cardTitle, cardSubtitle }: any) {

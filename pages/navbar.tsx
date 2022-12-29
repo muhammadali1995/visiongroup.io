@@ -37,7 +37,7 @@ export default function Navbar() {
             <div className={'flex items-center justify-between z-50 sm:px-16 px-2 shadow-nav top-0 w-full lg:pb-1 ' + (isDarkMode ? 'bg-gray-450 text-white' : 'bg-white text-gray-450')}>
                 <div className="flex items-center">
                     <Image
-                        src='/../public/assets/logo.png'
+                        src='https://uniquegroup.sg/logo.png'
                         alt="logo"
                         width={55}
                         height={55}

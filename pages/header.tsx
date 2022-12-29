@@ -21,7 +21,7 @@ export default function Header() {
             </div>
             <div>
                 <Image
-                    src='/../public/assets/header.png'
+                    src='https://uniquegroup.sg/heroImage.png'
                     alt="header"
                     width={808}
                     height={490}
