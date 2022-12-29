@@ -1,7 +1,11 @@
+import { useContext, useState } from 'react'
+import { Context } from './index'
+
 export default function Footer() {
+    const { isDarkMode }: any = useContext(Context)
     return (
         <>
-            <div className='px-16 bg-[#f7fbff] py-8 mt-9 lg:flex items-start justify-between' id="testimonial">
+            <div className={'px-16 py-8 mt-9 lg:flex items-start justify-between ' + (isDarkMode ? 'bg-gray-450 text-white' : 'bg-[#f7fbff] text-gray-450')} id="testimonial">
                 <div className="flex items-center">
                     <div className='flex items-center text-sm'>
                         <img src="https://uniquegroup.sg/phone-call%201.svg" alt="phone" />
@@ -29,7 +33,7 @@ export default function Footer() {
                 </div>
             </div>
             <hr className="bg-black h-[2px]" />
-            <div className="flex justify-center items-center bg-[#f7fbff] md:justify-between px-16 py-8">
+            <div className={"flex justify-center items-center md:justify-between px-16 py-8 " + (isDarkMode ? 'bg-gray-450 text-white' : 'bg-[#f7fbff] text-gray-450')}>
                 <h3 className="font-bold text-[18px] hidden md:block">Unique Group</h3>
                 <p>Copyright © Unique Group, Inc</p>
             </div>

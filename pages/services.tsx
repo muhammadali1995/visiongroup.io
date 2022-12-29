@@ -1,8 +1,11 @@
 import { cards } from './data'
+import { useContext, useState } from 'react'
+import { Context } from './index'
 
 function ServicesCard({ cardImage, cardTitle, cardSubtitle }: any) {
+    const { isDarkMode }: any = useContext(Context)
     return (
-        <div className='w-full p-10 text-black bg-gray-150 cursor-pointer hover:bg-blue-450 card hover:text-white' style={{ "outline": "1px solid rgba(0,0,0,.15)" }}>
+        <div className={'w-full p-10 cursor-pointer card ' + (isDarkMode ? 'text-white bg-gray-450 hover:bg-blue-450 hover:text-white' : 'text-gray-450 bg-gray-150 hover:bg-blue-450 hover:text-white')} style={{ "outline": "1px solid rgba(0,0,0,.15)" }}>
             <div className="text-blue-450 cardImage">{cardImage}</div>
             <h3 className="mt-6 font-normal text-xl">{cardTitle}</h3>
             <p className="mt-5 mb-10 font-normal">{cardSubtitle}</p>
@@ -17,9 +20,19 @@ function ServicesCard({ cardImage, cardTitle, cardSubtitle }: any) {
 export default function Services() {
     return (
         <div className='lg:px-16' id="services">
-            <h1 className='title mt-20 mb-16'>Our Services</h1>
-            <div className='grid lg:grid-cols-3 sm:grid-cols-2'>
+            <h1 className='title sm:mt-20 mt-10 sm:mb-16 mb-8'>Our Services</h1>
+            <div className='lg:grid-cols-3 sm:grid-cols-2 md:grid hidden'>
                 {cards.map((card: any, index: any) => {
+                    return <ServicesCard
+                        key={index}
+                        cardImage={card.img}
+                        cardTitle={card.title}
+                        cardSubtitle={card.subtitle}
+                    />
+                })}
+            </div>
+            <div className='lg:grid-cols-3 sm:grid-cols-2 md:hidden grid'>
+                {cards.slice(0, 4).map((card: any, index: any) => {
                     return <ServicesCard
                         key={index}
                         cardImage={card.img}

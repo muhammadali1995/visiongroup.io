@@ -4,7 +4,7 @@
 
 @layer base {
     .title {
-        @apply leading-[55px] font-normal text-[45px] text-center
+        @apply sm:leading-[55px] font-normal sm:text-[45px] text-3xl text-center
     }
 }
 
