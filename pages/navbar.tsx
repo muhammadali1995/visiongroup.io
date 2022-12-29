@@ -2,9 +2,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
-import { links } from './data'
 import { useContext } from 'react'
 import { Context } from './index'
+
+const links: any = [
+    { name: 'Home', href: '#home' },
+    { name: 'Services', href: '#services' },
+    { name: 'Projects', href: '#project' },
+    { name: 'Testimonials', href: '#testimonial' },
+    { name: 'Contact', href: '#contact' },
+]
 
 export default function Navbar() {
     const [isMenuBtnClicked, setIsMenuBtnClicked] = useState(false)

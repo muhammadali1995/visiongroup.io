@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Navbar from './navbar'
 import Header from './header'
 import Services from './services'

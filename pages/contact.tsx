@@ -1,7 +1,12 @@
 import Image from 'next/image'
-import { contacts } from './data'
 import { useContext, useState } from 'react'
 import { Context } from './index'
+
+const contacts: any = [
+    { title: 'The team understands the seriousness of the situation and responds quickly.', creator: 'Ulf Viljanen', company: 'CEO, ICF Singapore' },
+    { title: 'The team understands the seriousness of the situation and responds quickly.', creator: 'Ulf Viljanen', company: 'CEO, ICF Singapore' },
+    { title: 'The team understands the seriousness of the situation and responds quickly.', creator: 'Ulf Viljanen', company: 'CEO, ICF Singapore' },
+]
 
 function ContactCard({ cardTitle, cardCreator, cardCompany, isDarkMode }: any) {
     return (
