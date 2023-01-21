@@ -6,12 +6,13 @@ import Project from './project'
 import Contact from './contact'
 import Footer from './footer'
 import { createContext, useContext, useState } from 'react';
+import clientPromise from '../lib/mongodb'
 
 export const Context = createContext({})
 
-export default function Home() {
+export default function Home({ res }) {
   const [isDarkMode, setIsDarkMode] = useState(false)
-  
+
   const DarkModeSwitchBtn = () => {
     return <div className='shadow-xl flex items-center fixed bottom-10 right-10 z-40 border border-black rounded-full'>
       <button
@@ -40,7 +41,7 @@ export default function Home() {
           <Navbar />
           <Header />
           <Services />
-          <Project />
+          <Project res={res} />
           <Contact />
           <Footer />
           <DarkModeSwitchBtn />
@@ -48,4 +49,21 @@ export default function Home() {
       </div>
     </Context.Provider>
   )
+}
+
+
+export async function getServerSideProps() {
+  try {
+    const client = await clientPromise;
+    const db = client.db("Portfolio")
+    const res = await db.collection('projects').find()
+      .toArray()
+    return {
+      props: { isConnected: true, res: JSON.parse(JSON.stringify(res)) },
+    }
+  } catch (e) {
+    return {
+      props: { isConnected: false },
+    }
+  }
 }
